@@ -6,10 +6,11 @@
 console.log("i am batman");
 
 const bookings =[];
-const createBooking = function(flightNum,numPassengers ,price ){
+const createBooking = function(flightNum,numPassengers =1 ,price =199 * numPassengers){
    //ES 5
-  numPassengers = numPassengers || 1;
-  price = price || 199;
+  // numPassengers = numPassengers || 1;
+  // price = price || 199;
+
   const booking ={
     flightNum,
     numPassengers,
@@ -21,6 +22,12 @@ const createBooking = function(flightNum,numPassengers ,price ){
 
 }
 createBooking('LH123');
+createBooking('LH123',2,800);
+createBooking('LH123',2);
+createBooking('LH123',5);
+
+createBooking('LH123',undefined,1000);
+
 
 
 /*
