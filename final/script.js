@@ -53,8 +53,15 @@ const chackIn =  function(flightnum,passenger){
 chackIn(flight,utshob);
 
 console.log(flight);
-console.log(utshob);
+console.log(utshob); 
 
+const newPassport = function(person){
+  person.passport = Math.trunc(Math.random() * 1000000000);
+
+};
+
+newPassport(utshob)
+chackIn(flight,utshob);
 
 
 
