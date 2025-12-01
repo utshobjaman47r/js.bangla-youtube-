@@ -26,10 +26,55 @@ createBooking('LH123',2,800);
 createBooking('LH123',2);
 createBooking('LH123',5);
 
-createBooking('LH123',undefined,1000);
+createBooking('LH123',undefined,1000);// if you want the default value , use undigined it will skip the value 
+
+
+const flight = 'LH123';
+
+
+const utshob = {
+  name :'BRUCE WAYNE',
+  passport : 123457215454, 
+};
+
+
+const chackIn =  function(flightnum,passenger){
+  flightnum = "LH999",
+  passenger.name = "Mr" + passenger.name;
+  if(passenger.passport === 123457215454){
+    alert("checaked in ");
+  }else{
+    alert("wrong passport")
+  }
+
+
+}
+
+chackIn(flight,utshob);
+
+console.log(flight);
+console.log(utshob);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 /*
 ///////////////////////////////////////
 // Default Parameters
