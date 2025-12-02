@@ -47,13 +47,13 @@ const chackIn =  function(flightnum,passenger){
     alert("wrong passport")
   }
 
-
 }
+  
+// chackIn(flight,utshob);
 
-chackIn(flight,utshob);
+// console.log(flight);
+// console.log(utshob); 
 
-console.log(flight);
-console.log(utshob); 
 
 const newPassport = function(person){
   person.passport = Math.trunc(Math.random() * 1000000000);
@@ -63,7 +63,7 @@ const newPassport = function(person){
 newPassport(utshob)
 chackIn(flight,utshob);
 
-
+ 
 
 
 
