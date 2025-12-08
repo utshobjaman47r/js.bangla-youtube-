@@ -77,17 +77,31 @@ const upperFirstWord = function(str){
 
 };
 
-
+// ;higher order function 
 const transformer = function(str,fn){
   console.log(`transfrom stirng ${fn(str)}`);
-  console.log(`transfrom by : ${fn.name}`)
+  console.log(`transfrom by : ${fn.name}`);
+
+  console.log(`trnsfromed by ${fn.name}`)
 
 };
 
 
-transformer("javascript is the bast!",upperFirstWord)
+transformer("javascript is the bast!",upperFirstWord);
+transformer("javascript is the bast!",oneWord);
 
 
+
+// js uses callbacks all the time 
+const high5 = function(){
+  console.log("Hello i am utshob whats your name ")
+};
+
+document.body.addEventListener('click',high5);
+
+
+
+["jonas ","terminator", "salman khan "].forEach(high5);
 
 
 
