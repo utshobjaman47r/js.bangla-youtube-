@@ -105,10 +105,30 @@ document.body.addEventListener('click',high5);
 
 
 
+const greet = function(greeting){
+  return function(name){
+    console.log( `${greeting},${name}` )
+  }
+
+}
+
+const greeterhey =greet("hey")
+
+greeterhey("uthsob");
+greeterhey("batman");
+
+greet("hello")("supergril");
 
 
+const greet2 = greeting=> name => {
+   console.log(`${greeting},${name}`)
+  
+};
 
 
+const greeterhello =  greet2("helloZ");
+
+greeterhello('uthsob')
 
 
 
@@ -519,5 +539,4 @@ GOOD LUCK 😀
     header.style.color = 'blue';
   });
 })();
-*/
-
+*/   
