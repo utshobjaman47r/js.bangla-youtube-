@@ -64,7 +64,7 @@ newPassport(utshob)
 chackIn(flight,utshob);
 
  
-
+// replacing the place 
 const oneWord = function(str){
   return str.replace(/ /g," ").toLowerCase();
 
@@ -72,12 +72,12 @@ const oneWord = function(str){
 
 
 const upperFirstWord = function(str){
-  const [first,...others] =str.split(" ");
+  const [first,...others] =str.split("");
   return[first.toUpperCase(),...others].join(' ');
 
 };
 
-// ;higher order function 
+// higher order function 
 const transformer = function(str,fn){
   console.log(`transfrom stirng ${fn(str)}`);
   console.log(`transfrom by : ${fn.name}`);
