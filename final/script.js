@@ -145,12 +145,59 @@ const luthansa = {
   itacode :"LH",
   bookings:[],
   book :function(flightNum,name){
-    console.log(`${name}  booked a seat on ${this.airline} flight${this.itacode} ${flightNum}`)
+    console.log(`${name}  booked a seat on ${this.airline} flight${this.itacode} ${flightNum}`);
+  this.bookings.push({flight :`${this.itacode} ${flightNum}`,name})
 
   } 
 };
 
+console.log(luthansa);
 luthansa.book(239,"uthsob");
 luthansa.book(2599,"batman")
 
-console.log(this);
+const ewuroWrings = {
+  airline :"EuroWrings",
+  itacode : "Ew",
+  bookings: [],
+};
+
+
+
+
+// call method 
+
+const book =luthansa.book
+
+//Does not work 
+//book(23,"sara williams") 
+
+book.call(ewuroWrings,23,"sara williams");
+
+console.log(ewuroWrings);
+
+book.call(luthansa, 444, "williham gOulfman");
+
+const swiss = {
+  airline :"swiss airline",
+  itacode :"Lx",
+  bookings:[],
+};
+
+book.call(swiss,583,"Marry jane");
+console.log(swiss);
+
+
+// apply method
+
+const flightData = [583,"GORGE copper"];
+
+book.apply(swiss,flightData);
+console.log(swiss);
+
+// morderan use 
+book.call(swiss,...flightData);
+console.log(swiss);
+
+const bookEWE = book.bind(ewuroWrings);
+bookEWE(23,"stven williams");
+// console.log(bookEWE);
