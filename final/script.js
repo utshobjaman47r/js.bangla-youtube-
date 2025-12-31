@@ -198,6 +198,25 @@ console.log(swiss);
 book.call(swiss,...flightData);
 console.log(swiss);
 
+
+//bind method 
 const bookEWE = book.bind(ewuroWrings);
+const bookLH = book.bind(luthansa);
+const bookLX = book.bind(swiss);
+
 bookEWE(23,"stven williams");
-// console.log(bookEWE);
+console.log(bookEWE);
+
+bookLH(25,"jack hamsworth");
+bookLX(42,"khabir khan");
+
+// console.log(bookLH);
+// console.log(bookLX);
+
+
+const bookEWE23 = book.bind(ewuroWrings,23);
+
+bookEWE23("lutfor jaman uthosb");
+bookEWE23("jane wilde");
+
+
