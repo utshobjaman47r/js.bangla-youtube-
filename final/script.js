@@ -219,4 +219,16 @@ const bookEWE23 = book.bind(ewuroWrings,23);
 bookEWE23("lutfor jaman uthosb");
 bookEWE23("jane wilde");
 
+// with Event lestener 
+
+luthansa.planes = 300;
+
+luthansa.buyPlane = function(){
+  console.log(this);
+  this.planes++
+  console.log(this.planes);
+};
+luthansa.buyPlane();
+
+document.querySelector('.buy').addEventListener('click',luthansa.buyPlane.bind(luthansa));
 
