@@ -232,3 +232,30 @@ luthansa.buyPlane();
 
 document.querySelector('.buy').addEventListener('click',luthansa.buyPlane.bind(luthansa));
 
+//partial application 
+
+const addTax = (rate,value) => value + value *rate;
+
+console.log(addTax(0.1,200));
+
+const addVAT = addTax.bind(null,0.23);
+// addVAT = (value) => value + value *0.23
+
+console.log(addVAT(100));
+console.log(addVAT(235));
+
+
+
+
+
+
+  
+// const cart = {
+//   tax: 0.1,
+//   addTax(value) {
+//     return value + value * this.tax;
+//   }
+// };
+
+// const add = cart.addTax.bind(cart);
+// console.log(add(100)); // works because `this` is important
