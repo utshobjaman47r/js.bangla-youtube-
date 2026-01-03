@@ -2,107 +2,107 @@
 
 
 
-// dddd ;
-// console.log("i am batman");
 
-// const bookings =[];
-// const createBooking = function(flightNum,numPassengers =1 ,price =199 * numPassengers){
-//    //ES 5
-//   // numPassengers = numPassengers || 1;
-//   // price = price || 199;
+console.log("i am batman");
 
-//   const booking ={
-//     // flightNum:flightNum,
-//     flightNum,
-//     numPassengers,
-//     price,
-//   };
-//   console.log(booking);
-//   bookings.push(booking);
+const bookings =[];
+const createBooking = function(flightNum,numPassengers =1 ,price =199 * numPassengers){
+   //ES 5
+  // numPassengers = numPassengers || 1;
+  // price = price || 199;
 
-
-// }
-// createBooking('LH123');
-// createBooking('LH123',2,800);
-// createBooking('LH123',2);
-// createBooking('LH123',5);
-
-// createBooking('LH123',undefined,1000);// if you want the default value , use undigined it will skip the value 
+  const booking ={
+    // flightNum:flightNum,
+    flightNum,
+    numPassengers,
+    price,
+  };
+  console.log(booking);
+  bookings.push(booking);
 
 
-// const flight = 'LH123';
+} 
+createBooking('LH123');
+createBooking('LH123',2,800);
+createBooking('LH123',2);
+createBooking('LH123',5);
+
+createBooking('LH123',undefined,1000);// if you want the default value , use undigined it will skip the value 
 
 
-// const utshob = {
-//   name :'BRUCE WAYNE',
-//   passport : 123457215454, 
-// };
+const flight = 'LH123';
 
 
-// const chackIn =  function(flightnum,passenger){
-//   flightnum = "LH999",
-//   passenger.name = "Mr" + passenger.name;
-//   if(passenger.passport === 123457215454){
-//     alert("checaked in ");
-//   }else{
-//     alert("wrong passport")
-//   }
+const utshob = {
+  name :'BRUCE WAYNE',
+  passport : 123457215454, 
+};
 
-// }
+
+const chackIn =  function(flightnum,passenger){
+  flightnum = "LH999",
+  passenger.name = "Mr" + passenger.name;
+  if(passenger.passport === 123457215454){
+    alert("checaked in ");
+  }else{
+    alert("wrong passport")
+  }
+
+}
   
-// chackIn(flight,utshob);
+chackIn(flight,utshob);
 
-// console.log(flight);
-// console.log(utshob); 
+console.log(flight);
+console.log(utshob); 
 
 
-// const newPassport = function(person){
-//   person.passport = Math.trunc(Math.random() * 1000000000);
+const newPassport = function(person){
+  person.passport = Math.trunc(Math.random() * 1000000000);
 
-// };
+};
 
-// newPassport(utshob)
-// chackIn(flight,utshob);
+newPassport(utshob)
+chackIn(flight,utshob);
 
  
-// // replacing the place 
-// const oneWord = function(str){
-//   return str.replace(/ /g," ").toLowerCase();
+// replacing the place 
+const oneWord = function(str){
+  return str.replace(/ /g," ").toLowerCase();
 
-// };
-
-
-// const upperFirstWord = function(str){
-//   const [first,...others] =str.split(" ");
-//   return[first.toUpperCase(),...others].join(' ');
-
-// };
-
-// // higher order function 
-// const transformer = function(str,fn){
-//   console.log(`transfrom stirng ${fn(str)}`);
-//   console.log(`transfrom by : ${fn.name}`);
-
-//   console.log(`trnsfromed by ${fn.name}`)
-
-// };
+};
 
 
-// transformer("javascript is the bast!",upperFirstWord);
-// transformer("javascript is the bast!",oneWord);
+const upperFirstWord = function(str){
+  const [first,...others] =str.split(" ");
+  return[first.toUpperCase(),...others].join(' ');
+
+};
+
+// higher order function 
+const transformer = function(str,fn){
+  console.log(`transfrom stirng ${fn(str)}`);
+  console.log(`transfrom by : ${fn.name}`);
+
+  console.log(`trnsfromed by ${fn.name}`)
+
+};
 
 
-
-// // js uses callbacks all the time 
-// const high5 = function(){
-//   console.log("Hello i am utshob whats your name ")
-// };
-
-// document.body.addEventListener('click',high5);
+transformer("javascript is the bast!",upperFirstWord);
+transformer("javascript is the bast!",oneWord);
 
 
 
-// ["jonas ","terminator", "salman khan "].forEach(high5);
+// js uses callbacks all the time 
+const high5 = function(){
+  console.log("Hello i am utshob whats your name ")
+};
+
+document.body.addEventListener('click',high5);
+
+
+
+["jonas ","terminator", "salman khan "].forEach(high5);
 
 
 
@@ -244,18 +244,23 @@ const addVAT = addTax.bind(null,0.23);
 console.log(addVAT(100));
 console.log(addVAT(235));
 
+const addTax2 = function(rate){
+  return function(value){
+    return value + value * rate;
+  }
+
+};
+const addVat =addTax2(0.3);
+console.log(addVat(200));
 
 
+const poll = {
+  question:"what is your favorite programming langugae ?",
+  Options :['0:javascript',"1:python","2:rust","3:c++"],
+  answer: new Array(4).fill(0),
+  resgisterNewAnswer:prompt("what is your favorit porgramming language?")
 
 
+};
 
-  
-// const cart = {
-//   tax: 0.1,
-//   addTax(value) {
-//     return value + value * this.tax;
-//   }
-// };
-
-// const add = cart.addTax.bind(cart);
-// console.log(add(100)); // works because `this` is important
+ 
