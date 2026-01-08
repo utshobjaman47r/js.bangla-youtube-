@@ -6,10 +6,10 @@
 console.log("i am batman");
 
 const bookings =[];
-const createBooking = function(flightNum,numPassengers =1 ,price =199 * numPassengers){
+const createBooking = function(flightNum,numPassengers = 1 ,price = 199 * numPassengers){
    //ES 5
   // numPassengers = numPassengers || 1;
-  // price = price || 199;
+  // price = price || 199;   
 
   const booking ={
     // flightNum:flightNum,
@@ -48,7 +48,7 @@ const chackIn =  function(flightnum,passenger){
     alert("wrong passport")
   }
 
-}
+}; 
   
 chackIn(flight,utshob);
 
@@ -67,7 +67,7 @@ chackIn(flight,utshob);
  
 // replacing the place 
 const oneWord = function(str){
-  return str.replace(/ /g," ").toLowerCase();
+  return str.replace(/ /g,"  ").toLowerCase();
 
 };
 
@@ -79,7 +79,7 @@ const upperFirstWord = function(str){
 };
 
 // higher order function 
-const transformer = function(str,fn){
+const transformer = function(str,fn){ 
   console.log(`transfrom stirng ${fn(str)}`);
   console.log(`transfrom by : ${fn.name}`);
 
@@ -114,7 +114,7 @@ const greet = function(greeting){
 }
 
 //greet("hey","uthsob");
-const greeterhey =greet("hey") // in this line greet also return the name name functions 
+const greeterhey =greet("hey") // in this line greet also return the name functions 
 
 greeterhey("uthsob");
 greeterhey("batman");
@@ -161,11 +161,21 @@ const ewuroWrings = {
   bookings: [],
 };
 
+const azeerSpace = {
+  airline :"azeerSace and ocean ",
+  itcode  : "Az",
+  bookings :[],
+  // no need to crate this because this fuctiosn is explecitlly called by using some  methods 
+  // book :function(flightNum,name){
+  //   console.log(`${name} booked a seat on ${this.airline},flight${this.itcode} ${flightNum}`);
+  //   bookings.push({flight:`${this.itcode}${flightNum}`,name})
 
 
+  // },
+}
 
 // call method 
-
+  
 const book =luthansa.book
 
 //Does not work 
@@ -176,6 +186,7 @@ book.call(ewuroWrings,23,"sara williams");
 console.log(ewuroWrings);
 
 book.call(luthansa, 444, "williham gOulfman");
+book.call(azeerSpace,447,'MALIK AL GAFUR')
 
 const swiss = {
   airline :"swiss airline",
@@ -258,7 +269,7 @@ const poll = {
   question:"what is your favorite programming langugae ?",
   Options :['0:javascript',"1:python","2:rust","3:c++"],
   answer: new Array(4).fill(0),
-  resgisterNewAnswer:prompt("what is your favorit porgramming language?")
+  // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
 
 
 };
