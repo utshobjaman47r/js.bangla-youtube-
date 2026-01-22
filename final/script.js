@@ -243,7 +243,7 @@ luthansa.buyPlane();
 
 document.querySelector('.buy').addEventListener('click',luthansa.buyPlane.bind(luthansa));
 
-//partial application 
+//partial application ?? this means preset parameters 
 
 const addTax = (rate,value) => value + value *rate;
 
@@ -268,10 +268,18 @@ console.log(addVat(200));
 const poll = {
   question:"what is your favorite programming langugae ?",
   Options :['0:javascript',"1:python","2:rust","3:c++"],
-  answer: new Array(4).fill(0),
+  answers: new Array(4).fill(0),
   // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
-
+  regisgterNewAnswer(){
+    const answer = Number(prompt(`${this.question}\n${this.Options.join("\n")}\n("what is your opinion")`))
+    console.log(answer);
+    typeof answer === "number" && answer<this.answers.length && this.answers[answer]++;
+    console.log(this.answers)
+    },
+  
 
 };
+
+poll.regisgterNewAnswer();
 
  
