@@ -265,43 +265,78 @@
 // console.log(addVat(200));
 
 
-const poll = {
-  question:"what is your favorite programming langugae ?",
-  Options :['0:javascript',"1:python","2:rust","3:c++"],
-  answers: new Array(4).fill(0),
-  // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
+// const poll = {
+//   question:"what is your favorite programming langugae ?",
+//   Options :['0:javascript',"1:python","2:rust","3:c++"],
+//   answers: new Array(4).fill(0),
+//   // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
 
-  resgisterNewAnswer(){
-    const answer = Number(prompt(`${this.question}\n${this.Options.join('\n')}\n("what is your opinion")`));
-    console.log(answer);
+//   resgisterNewAnswer(){
+//     const answer = Number(prompt(`${this.question}\n${this.Options.join('\n')}\n("what is your opinion")`));
+//     console.log(answer);
 
-    typeof answer === "number" && answer < this.answers.length && this.answers[answer]++;
+//     typeof answer === "number" && answer < this.answers.length && this.answers[answer]++;
     
-    this.displayResult()
-    this.displayResult("string")
+//     this.displayResult()
+//     this.displayResult("string")
     
 
 
 
-  },
-  displayResult(type = "array"){
-    if(type === "array"){
-      console.log(this.answers);
-    }else if (type === "string"){
-      console.log(`poll results are ${this.answers.join(", ")}`)
+//   },
+//   displayResult(type = "array"){
+//     if(type === "array"){
+//       console.log(this.answers);
+//     }else if (type === "string"){
+//       console.log(`poll results are ${this.answers.join(", ")}`)
 
-    }
-  }
+//     }
+//   }
  
 
+// };
+// poll.resgisterNewAnswer();
+// console.log(new Array());
+
+
+// document.querySelector(".poll").addEventListener('click',poll.resgisterNewAnswer.bind(poll));
+
+// poll.displayResult.call({answers:[5,2,3]},"String");
+// poll.displayResult.call({answers:[1,5,3,9,6,1],},"string");
+// poll.displayResult.call({answers:[1,5,3,9,6,1],});
+
+
+
+
+
+
+
+
+
+
+
+const rurnOne = function(){
+  console.log("this function will not run agian ")
+
 };
-poll.resgisterNewAnswer();
-console.log(new Array());
+
+rurnOne();
+rurnOne();
+
+(function () {
+  console.log("this function will not run agian")
+  
+})();// every functins needs a name but we tricked with js and make the statement into expression by adding () since 
+// we did not named it and calls it imidiatley . now this function  will not call it later 
 
 
-document.querySelector(".poll").addEventListener('click',poll.resgisterNewAnswer.bind(poll));
+// so this functioned called imidiatley involved functions function expression ;
 
-poll.displayResult.call({answers:[5,2,3]},"String");
-poll.displayResult.call({answers:[1,5,3,9,6,1],},"string");
-poll.displayResult.call({answers:[1,5,3,9,6,1],});
+(function(){
+  console.log("the lost soul will not found agian ")
+})();
 
+//also for arrow functions 
+
+
+(() => console.log("well will lost as if we are not existed "))();
