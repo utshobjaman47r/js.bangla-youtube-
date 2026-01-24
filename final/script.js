@@ -3,266 +3,266 @@
 
 
 
-console.log("i am batman");
+// console.log("i am batman");
 
-const bookings =[];
-const createBooking = function(flightNum,numPassengers = 1 ,price = 199 * numPassengers){
-   //ES 5
-  // numPassengers = numPassengers || 1;
-  // price = price || 199;   
+// const bookings =[];
+// const createBooking = function(flightNum,numPassengers = 1 ,price = 199 * numPassengers){
+//    //ES 5
+//   // numPassengers = numPassengers || 1;
+//   // price = price || 199;   
 
-  const booking ={
-    // flightNum:flightNum,
-    flightNum,
-    numPassengers,
-    price,
-  };
-  console.log(booking);
-  bookings.push(booking);
-
-
-} 
-createBooking('LH123');
-createBooking('LH123',2,800);
-createBooking('LH123',2);
-createBooking('LH123',5);
-
-createBooking('LH123',undefined,1000);// if you want the default value , use undigined it will skip the value 
+//   const booking ={
+//     // flightNum:flightNum,
+//     flightNum,
+//     numPassengers,
+//     price,
+//   };
+//   console.log(booking);
+//   bookings.push(booking);
 
 
-const flight = 'LH123';
+// } 
+// createBooking('LH123');
+// createBooking('LH123',2,800);
+// createBooking('LH123',2);
+// createBooking('LH123',5);
+
+// createBooking('LH123',undefined,1000);// if you want the default value , use undigined it will skip the value 
 
 
-const utshob = {
-  name :'BRUCE WAYNE',
-  passport : 123457215454, 
-};
+// const flight = 'LH123';
 
 
-const chackIn =  function(flightnum,passenger){
-  flightnum = "LH999",
-  passenger.name = "Mr" + passenger.name;
-  if(passenger.passport === 123457215454){
-    alert("checaked in ");
-  }else{
-    alert("wrong passport")
-  }
+// const utshob = {
+//   name :'BRUCE WAYNE',
+//   passport : 123457215454, 
+// };
 
-}; 
+
+// const chackIn =  function(flightnum,passenger){
+//   flightnum = "LH999",
+//   passenger.name = "Mr" + passenger.name;
+//   if(passenger.passport === 123457215454){
+//     alert("checaked in ");
+//   }else{
+//     alert("wrong passport")
+//   }
+
+// }; 
   
-chackIn(flight,utshob);
+// chackIn(flight,utshob);
 
-console.log(flight);
-console.log(utshob); 
+// console.log(flight);
+// console.log(utshob); 
 
 
-const newPassport = function(person){
-  person.passport = Math.trunc(Math.random() * 1000000000);
+// const newPassport = function(person){
+//   person.passport = Math.trunc(Math.random() * 1000000000);
 
-};
+// };
 
-newPassport(utshob)
-chackIn(flight,utshob);
+// newPassport(utshob)
+// chackIn(flight,utshob);
 
  
-// replacing the place 
-const oneWord = function(str){
-  return str.replace(/ /g,"  ").toLowerCase();
+// // replacing the place 
+// const oneWord = function(str){
+//   return str.replace(/ /g,"  ").toLowerCase();
 
-};
-
-
-const upperFirstWord = function(str){
-  const [first,...others] =str.split(" ");
-  return[first.toUpperCase(),...others].join(' ');
-
-};
-
-// higher order function 
-const transformer = function(str,fn){ 
-  console.log(`transfrom stirng ${fn(str)}`);
-  console.log(`transfrom by : ${fn.name}`);
-
-  console.log(`trnsfromed by ${fn.name}`)
-
-};
+// };
 
 
-transformer("javascript is the bast!",upperFirstWord);
-transformer("javascript is the bast!",oneWord);
+// const upperFirstWord = function(str){
+//   const [first,...others] =str.split(" ");
+//   return[first.toUpperCase(),...others].join(' ');
+
+// };
+
+// // higher order function 
+// const transformer = function(str,fn){ 
+//   console.log(`transfrom stirng ${fn(str)}`);
+//   console.log(`transfrom by : ${fn.name}`);
+
+//   console.log(`trnsfromed by ${fn.name}`)
+
+// };
 
 
-
-// js uses callbacks all the time 
-const high5 = function(){
-  console.log("Hello i am utshob whats your name ")
-};
-
-document.body.addEventListener('click',high5);
+// transformer("javascript is the bast!",upperFirstWord);
+// transformer("javascript is the bast!",oneWord);
 
 
 
-["jonas ","terminator", "salman khan "].forEach(high5);
+// // js uses callbacks all the time 
+// const high5 = function(){
+//   console.log("Hello i am utshob whats your name ")
+// };
+
+// document.body.addEventListener('click',high5);
 
 
 
-const greet = function(greeting){
-  return function(name){
-    console.log( `${greeting},${name}` )
-  }
+// ["jonas ","terminator", "salman khan "].forEach(high5);
 
-}
 
-//greet("hey","uthsob");
-const greeterhey =greet("hey") // in this line greet also return the name functions 
 
-greeterhey("uthsob");
-greeterhey("batman");
+// const greet = function(greeting){
+//   return function(name){
+//     console.log( `${greeting},${name}` )
+//   }
+
+// }
+
+// //greet("hey","uthsob");
+// const greeterhey =greet("hey") // in this line greet also return the name functions 
+
+// greeterhey("uthsob");
+// greeterhey("batman");
    
 
- // anoter mode which as tow parameter 
+//  // anoter mode which as tow parameter 
 
- greet("hello")("supergril"); //  tow parameter 
+//  greet("hello")("supergril"); //  tow parameter 
 
 
-//challange 
+// //challange 
 
-const greet2 = greeting=> name => {
-   console.log(`${greeting},${name}`)
+// const greet2 = greeting=> name => {
+//    console.log(`${greeting},${name}`)
   
-};
+// };
 
 
-const greeterhello =  greet2("helloZ");
+// const greeterhello =  greet2("helloZ");
 
-greeterhello('uthsob');
+// greeterhello('uthsob');
 
 
   
 
-const luthansa = {
-  airline :"luthansa",
-  itacode :"LH",
-  bookings:[],
-  book :function(flightNum,name){
-    console.log(`${name}  booked a seat on ${this.airline} flight${this.itacode} ${flightNum}`);
-  this.bookings.push({flight :`${this.itacode} ${flightNum}`,name})
+// const luthansa = {
+//   airline :"luthansa",
+//   itacode :"LH",
+//   bookings:[],
+//   book :function(flightNum,name){
+//     console.log(`${name}  booked a seat on ${this.airline} flight${this.itacode} ${flightNum}`);
+//   this.bookings.push({flight :`${this.itacode} ${flightNum}`,name})
 
-  } 
-};
+//   } 
+// };
 
-console.log(luthansa);
-luthansa.book(239,"uthsob");
-luthansa.book(2599,"batman")
+// console.log(luthansa);
+// luthansa.book(239,"uthsob");
+// luthansa.book(2599,"batman")
 
-const ewuroWrings = {
-  airline :"EuroWrings",
-  itacode : "Ew",
-  bookings: [],
-};
+// const ewuroWrings = {
+//   airline :"EuroWrings",
+//   itacode : "Ew",
+//   bookings: [],
+// };
 
-const azeerSpace = {
-  airline :"azeerSace and ocean ",
-  itcode  : "Az",
-  bookings :[],
-  // no need to crate this because this fuctiosn is explecitlly called by using some  methods 
-  // book :function(flightNum,name){
-  //   console.log(`${name} booked a seat on ${this.airline},flight${this.itcode} ${flightNum}`);
-  //   bookings.push({flight:`${this.itcode}${flightNum}`,name})
+// const azeerSpace = {
+//   airline :"azeerSace and ocean ",
+//   itcode  : "Az",
+//   bookings :[],
+//   // no need to crate this because this fuctiosn is explecitlly called by using some  methods 
+//   // book :function(flightNum,name){
+//   //   console.log(`${name} booked a seat on ${this.airline},flight${this.itcode} ${flightNum}`);
+//   //   bookings.push({flight:`${this.itcode}${flightNum}`,name})
 
 
-  // },
-}
+//   // },
+// }
 
-// call method 
+// // call method 
   
-const book =luthansa.book
+// const book =luthansa.book
 
-//Does not work 
-//book(23,"sara williams") 
+// //Does not work 
+// //book(23,"sara williams") 
 
-book.call(ewuroWrings,23,"sara williams");
+// book.call(ewuroWrings,23,"sara williams");
 
-console.log(ewuroWrings);
+// console.log(ewuroWrings);
 
-book.call(luthansa, 444, "williham gOulfman");
-book.call(azeerSpace,447,'MALIK AL GAFUR')
+// book.call(luthansa, 444, "williham gOulfman");
+// book.call(azeerSpace,447,'MALIK AL GAFUR')
 
-const swiss = {
-  airline :"swiss airline",
-  itacode :"Lx",
-  bookings:[],
-};
+// const swiss = {
+//   airline :"swiss airline",
+//   itacode :"Lx",
+//   bookings:[],
+// };
 
-book.call(swiss,583,"Marry jane");
-console.log(swiss);
-
-
-// apply method
-
-const flightData = [583,"GORGE copper"];
-
-book.apply(swiss,flightData);
-console.log(swiss);
-
-// morderan use 
-book.call(swiss,...flightData);
-console.log(swiss);
+// book.call(swiss,583,"Marry jane");
+// console.log(swiss);
 
 
-//bind method 
-const bookEWE = book.bind(ewuroWrings);
-const bookLH = book.bind(luthansa);
-const bookLX = book.bind(swiss);
+// // apply method
 
-bookEWE(23,"stven williams");
-console.log(bookEWE);
+// const flightData = [583,"GORGE copper"];
 
-bookLH(25,"jack hamsworth");
-bookLX(42,"khabir khan");
+// book.apply(swiss,flightData);
+// console.log(swiss);
 
-// console.log(bookLH);
-// console.log(bookLX);
+// // morderan use 
+// book.call(swiss,...flightData);
+// console.log(swiss);
 
 
-const bookEWE23 = book.bind(ewuroWrings,23);
+// //bind method 
+// const bookEWE = book.bind(ewuroWrings);
+// const bookLH = book.bind(luthansa);
+// const bookLX = book.bind(swiss);
 
-bookEWE23("lutfor jaman uthosb");
-bookEWE23("jane wilde");
+// bookEWE(23,"stven williams");
+// console.log(bookEWE);
 
-// with Event lestener 
+// bookLH(25,"jack hamsworth");
+// bookLX(42,"khabir khan");
 
-luthansa.planes = 300;
+// // console.log(bookLH);
+// // console.log(bookLX);
 
-luthansa.buyPlane = function(){
-  console.log(this);
-  this.planes++
-  console.log(this.planes);
-};
-luthansa.buyPlane();
 
-document.querySelector('.buy').addEventListener('click',luthansa.buyPlane.bind(luthansa));
+// const bookEWE23 = book.bind(ewuroWrings,23);
 
-//partial application ?? this means preset parameters 
+// bookEWE23("lutfor jaman uthosb");
+// bookEWE23("jane wilde");
 
-const addTax = (rate,value) => value + value *rate;
+// // with Event lestener 
 
-console.log(addTax(0.1,200));
+// luthansa.planes = 300;
 
-const addVAT = addTax.bind(null,0.23);
-// addVAT = (value) => value + value *0.23
+// luthansa.buyPlane = function(){
+//   console.log(this);
+//   this.planes++
+//   console.log(this.planes);
+// };
+// luthansa.buyPlane();
 
-console.log(addVAT(100));
-console.log(addVAT(235));
+// document.querySelector('.buy').addEventListener('click',luthansa.buyPlane.bind(luthansa));
 
-const addTax2 = function(rate){
-  return function(value){
-    return value + value * rate;
-  }
+// //partial application ?? this means preset parameters 
 
-};
-const addVat =addTax2(0.3);
-console.log(addVat(200));
+// const addTax = (rate,value) => value + value *rate;
+
+// console.log(addTax(0.1,200));
+
+// const addVAT = addTax.bind(null,0.23);
+// // addVAT = (value) => value + value *0.23
+
+// console.log(addVAT(100));
+// console.log(addVAT(235));
+
+// const addTax2 = function(rate){
+//   return function(value){
+//     return value + value * rate;
+//   }
+
+// };
+// const addVat =addTax2(0.3);
+// console.log(addVat(200));
 
 
 const poll = {
@@ -270,16 +270,38 @@ const poll = {
   Options :['0:javascript',"1:python","2:rust","3:c++"],
   answers: new Array(4).fill(0),
   // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
-  regisgterNewAnswer(){
-    const answer = Number(prompt(`${this.question}\n${this.Options.join("\n")}\n("what is your opinion")`))
+
+  resgisterNewAnswer(){
+    const answer = Number(prompt(`${this.question}\n${this.Options.join('\n')}\n("what is your opinion")`));
     console.log(answer);
-    typeof answer === "number" && answer<this.answers.length && this.answers[answer]++;
-    console.log(this.answers)
-    },
-  
+
+    typeof answer === "number" && answer < this.answers.length && this.answers[answer]++;
+    
+    this.displayResult()
+    this.displayResult("string")
+    
+
+
+
+  },
+  displayResult(type = "array"){
+    if(type === "array"){
+      console.log(this.answers);
+    }else if (type === "string"){
+      console.log(`poll results are ${this.answers.join(", ")}`)
+
+    }
+  }
+ 
 
 };
+poll.resgisterNewAnswer();
+console.log(new Array());
 
-poll.regisgterNewAnswer();
 
- 
+document.querySelector(".poll").addEventListener('click',poll.resgisterNewAnswer.bind(poll));
+
+poll.displayResult.call({answers:[5,2,3]},"String");
+poll.displayResult.call({answers:[1,5,3,9,6,1],},"string");
+poll.displayResult.call({answers:[1,5,3,9,6,1],});
+
