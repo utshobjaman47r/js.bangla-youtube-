@@ -324,19 +324,38 @@ rurnOne();
 rurnOne();
 
 (function () {
-  console.log("this function will not run agian")
+  console.log("this function will not run agian");
+  const isprivate = 23;
+  console.log(isprivate);
+
   
 })();// every functins needs a name but we tricked with js and make the statement into expression by adding () since 
 // we did not named it and calls it imidiatley . now this function  will not call it later 
 
 
-// so this functioned called imidiatley involved functions function expression ;
+
+
+//console.log(isprivate);
+
+
+
+
+// so this functioned called imidiatley involved functionsexpression ;
 
 (function(){
   console.log("the lost soul will not found agian ")
 })();
 
 //also for arrow functions 
-
+// remove the name and  just add the () ; 
 
 (() => console.log("well will lost as if we are not existed "))();
+
+
+{
+  const isprivate = 23;
+  var isNotPrivate = 33;
+};
+
+// console.log(isprivate);
+console.log(isNotPrivate)
