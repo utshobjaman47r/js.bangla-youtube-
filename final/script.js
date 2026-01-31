@@ -411,3 +411,23 @@ h();
 f();
 
 console.dir(h);
+
+
+setTimeout(function(){
+  console.log('timer')
+},1000)
+
+
+
+const broadPassenger = function(n,wait){
+  const parGroup = n/3
+  setTimeout(function(){
+    console.log(`we are now bodaring now all ${n} passenger `);
+    console.log(`there are three gropups each with ${parGroup} passangers`)
+
+  },wait * 1000)
+  console.log(`will start bodaring in ${wait} seconds `)
+
+};
+
+broadPassenger(180,3);
