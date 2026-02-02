@@ -265,48 +265,45 @@
 // console.log(addVat(200));
 
 
-// const poll = {
-//   question:"what is your favorite programming langugae ?",
-//   Options :['0:javascript',"1:python","2:rust","3:c++"],
-//   answers: new Array(4).fill(0),
-//   // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
+const poll = {
+  question:"what is your favorite programming langugae ?",
+  Options :['0:javascript',"1:python","2:rust","3:c++"],
+  answers: new Array(4).fill(0),
+  // resgisterNewAnswer:prompt("what is your favorit porgramming language?")
 
-//   resgisterNewAnswer(){
-//     const answer = Number(prompt(`${this.question}\n${this.Options.join('\n')}\n("what is your opinion")`));
-//     console.log(answer);
+  resgisterNewAnswer(){
+    const answer = Number(prompt(`${this.question}\n${this.Options.join('\n')}\n("what is your opinion")`));
+    console.log(answer);
 
-//     typeof answer === "number" && answer < this.answers.length && this.answers[answer]++;
+    typeof answer === "number" && answer < this.answers.length && this.answers[answer]++;
     
-//     this.displayResult()
-//     this.displayResult("string")
+    this.displayResult()
+    this.displayResult("string")
     
 
 
 
-//   },
-//   displayResult(type = "array"){
-//     if(type === "array"){
-//       console.log(this.answers);
-//     }else if (type === "string"){
-//       console.log(`poll results are ${this.answers.join(", ")}`)
+  },
+  displayResult(type = "array"){
+    if(type === "array"){
+      console.log(this.answers);
+    }else if (type === "string"){
+      console.log(`poll results are ${this.answers.join(", ")}`)
 
-//     }
-//   }
+    }
+  }
  
 
-// };
-// poll.resgisterNewAnswer();
-// console.log(new Array());
+};
+poll.resgisterNewAnswer();
+console.log(new Array());
 
 
-// document.querySelector(".poll").addEventListener('click',poll.resgisterNewAnswer.bind(poll));
+document.querySelector(".poll").addEventListener('click',poll.resgisterNewAnswer.bind(poll));
 
-// poll.displayResult.call({answers:[5,2,3]},"String");
-// poll.displayResult.call({answers:[1,5,3,9,6,1],},"string");
-// poll.displayResult.call({answers:[1,5,3,9,6,1],});
-
-
-
+poll.displayResult.call({answers:[5,2,3]},"String");
+poll.displayResult.call({answers:[1,5,3,9,6,1],},"string");
+poll.displayResult.call({answers:[1,5,3,9,6,1],});
 
 
 
@@ -315,50 +312,53 @@
 
 
 
-// const rurnOne = function(){
-//   console.log("this function will not run agian ")
 
-// };
 
-// rurnOne();
-// rurnOne();
 
-// (function () {
-//   console.log("this function will not run agian");
-//   const isprivate = 23;
-//   console.log(isprivate);
+const rurnOne = function(){
+  console.log("this function will not run agian ")
+
+};
+
+rurnOne();
+rurnOne();
+
+(function () {
+  console.log("this function will not run agian");
+  const isprivate = 23;
+  console.log(isprivate);
 
   
-// })();// every functins needs a name but we tricked with js and make the statement into expression by adding () since 
-// // we did not named it and calls it imidiatley . now this function  will not call it later 
+})();// every functins needs a name but we tricked with js and make the statement into expression by adding () since 
+// we did not named it and calls it imidiatley . now this function  will not call it later 
 
 
 
 
-// //console.log(isprivate);
+//console.log(isprivate);
 
 
 
 
-// // so this functioned called imidiatley involved functionsexpression ;
+// so this functioned called imidiatley involved functionsexpression ;
 
-// (function(){
-//   console.log("the lost soul will not found agian ")
-// })();
+(function(){
+  console.log("the lost soul will not found agian ")
+})();
 
-// //also for arrow functions 
-// // remove the name and  just add the () ; 
+//also for arrow functions 
+// remove the name and  just add the () ; 
 
-// (() => console.log("well will lost as if we are not existed "))();
+(() => console.log("well will lost as if we are not existed "))();
 
 
-// {
-//   const isprivate = 23;
-//   var isNotPrivate = 33;
-// };
+{
+  const isprivate = 23;
+  var isNotPrivate = 33;
+};
 
-// // console.log(isprivate);
-// console.log(isNotPrivate);
+// console.log(isprivate);
+console.log(isNotPrivate);
 
 
 
@@ -425,9 +425,21 @@ const broadPassenger = function(n,wait){
     console.log(`we are now bodaring now all ${n} passenger `);
     console.log(`there are three gropups each with ${parGroup} passangers`)
 
-  },wait * 1000)
-  console.log(`will start bodaring in ${wait} seconds `)
+  },wait * 1000);
+  console.log(`will start bodaring in ${wait} seconds `);  
 
 };
 
 broadPassenger(180,3);
+
+
+(function () {
+  const header = document.querySelector('h1');
+  header.style.color = "red";
+  document.addEventListener('click',function(){
+    header.style.color = "blue"
+  })
+  
+  
+})();
+
